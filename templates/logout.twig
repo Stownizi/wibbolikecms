@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ config.name }}: Déconnexion</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon"/>
+    <link rel="stylesheet" href="css/global.css?release=1">
+
+  </head>
+
+  <body>
+  <div class="container">
+  <div class="col-12">
+  <h1 class="logo" style="position: relative;top:0;"></h1>
+    <div class="box" style="padding:15px;text-align: center;">
+      <div class="clear" style="padding:10px 0 0 0;border-top:dashed 1px #ccc;margin-top:10px;"></div>
+      <div class="alert green">
+        <p class="bye">
+          <span class="bold">Au revoir</span>, tu es déconnecté!
+        </p>
+      </div>
+      <a class="btn red" style="color:#fff" href="/">Quitter</a>
+
+      <div id="footer">
+      <p><a href="{{config.url}}/support" target="_self">Aide - Contact</a> / <a href="{{config.url}}/regles" target="_self">Conditions d'Utilisation</a> / <a href="{{config.url}}/community" target="_self">Communauté</a> / <a href="http://lightpics.net/" title="hébergeur d'images" target="_blank">LightPics</a> / <a href="/" target="_self">{{ config.name }}</a></p>
+      <p class="copyright">
+      © 2011-2017 {{ config.name }} Hôtel.<br/>
+      {{ config.name }} est un projet indépendant, à but non lucratif.<br/>
+      </div>
+  </div>
+  </body>
+</html>

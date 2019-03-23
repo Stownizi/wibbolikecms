@@ -1,0 +1,136 @@
+{% extends 'templates/start.twig' %}
+
+{% block content %}
+
+ {% if flash.getMessage('error') %}
+                <div class="error"><p>{{ flash.getMessage('error') | first }}</p></div>
+              {% endif %}
+
+            <header>
+                <div class="connexion_container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="logo"></div>
+                            </div>
+                            <div class="col-md-8">
+                                <form action="{{config.url}}{{ path_for('auth.signin') }}" method="post">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="login_username">Nom d'utilisateur:</label>
+                                            <input type="text" name="username" id="login_username" placeholder="Nom d'utilisateur" onblur="if(this.value=='') this.value='Nom d\'utilisateur';" onfocus="if(this.value=='Nom d\'utilisateur') this.value='';"/>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="pwd">Mot de passe:</label>
+                                            <input type="password" name="password" id="pwd" placeholder="Mot de passe" onblur="if(this.value=='') this.value='Mot de passe';" onfocus="if(this.value=='Mot de passe') this.value='';"/>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <button type="submit" class="btn_connexion">Connexion</button>
+                                        </div>
+                                    </div>
+                                    {{ csrf.field| raw }}
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fond_filtre">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="bienvenue">
+                                    <h1>Bienvenue sur Wibbo</h1>
+                                    <p>Inscris-toi pour devenir membre à part de la communauté !</p>
+                                </div>
+                            </div>
+                            <div class="col-md-2"></div>
+                            <div class="col-md-4">
+                                <a href="{{config.url}}{{ path_for('auth.register') }}" class="btn_register">
+                                    REJOINS-NOUS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="carousel_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <aside class="bull_decouverte">
+                                <h2>Découverte</h2>
+                                <div class="info">
+                                    <p>Découvre de nouveaux lieux extraordinaires et fais de nouvelles rencontres inoubliables sur Wibbo!</p>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="col-md-4">
+                            <aside class="bull_style">
+                                <h2>RENCONTRE</h2>
+                                <div class="info">
+                                    <p>Des milliers de gens formidables t'y attendent! Séjourne-y et fais toi un maximum de rencontres!</p>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="col-md-4">
+                            <aside class="bull_animation">
+                                <h2>Animation</h2>
+                                <div class="info">
+                                    <p>Émerveille tes amis en gagnant le plus possible aux jeux organisés par les joueurs et les animateurs!</p>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>
+                    <a href="{{config.url}}/support" target="_self">Aide - Contact</a>
+                    /
+                    <a href="{{config.url}}/disclaimer" target="_self">Conditions d'Utilisation</a>
+                    /
+                    <a href="{{config.url}}/community" target="_self">Communauté</a>
+                    /
+                    <a href="{{config.url}}/" target="_self">{{ config.name }}</a>
+                </p>
+                <p class="copyright">
+                    © 2011-2042
+                    {{ config.name }}
+                    Hôtel.<br/>
+                    {{ config.name }}
+                    est un projet indépendant, à but non lucratif.<br/>
+                </p>
+            </footer>
+
+            <div class="background_left"></div>
+            <div class="background_right"></div>
+
+            
+<script>
+                var $buoop = {
+                    notify: {
+                        i: -4,
+                        f: -4,
+                        o: -4,
+                        s: -2,
+                        c: -4
+                    },
+                    insecure: true,
+                    unsupported: true,
+                    api: 5
+                };
+                function $buo_f() {
+                    var e = document.createElement("script");
+                    e.src = "//browser-update.org/update.min.js";
+                    document.body.appendChild(e);
+                };
+                try {
+                    document.addEventListener("DOMContentLoaded", $buo_f, false)
+                } catch (e) {
+                    window.attachEvent("onload", $buo_f)
+                }
+            </script>
+
+{% endblock %}

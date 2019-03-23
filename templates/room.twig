@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ config.name }}: {{room.caption}}</title>
+    <link rel="icon" type="image/x-icon" href="{{config.asset}}/favicon.ico">
+    <link rel="stylesheet" href="{{config.url}}/css/global.css?release=1">
+
+  </head>
+
+  <body>
+  <div class="container" style="max-width: 500px;margin-top: 10px;">
+    <div class="box">
+      <h1 class="titre">Bienvenue à {{config.name}} Hôtel!</h2>
+      <div class="habblet box-content">
+      <img src="{{config.url}}/imgs/app_wibbo_hotel_image.png" style="float: left; margin-right: 20px; width: 75px; height: 75px"/>
+      <div id="fb-like-room-details" style="float: left; width: 300px">
+        <h4 style="margin: 0; padding: 0">Nom</h4>
+        {% if room.caption != '' %} {{room.caption |DecodeUtf8}} {% else %} Aucun titre {% endif %}
+        <h4 style="margin: 10px 0 0 0; padding: 0">Propriétaire</h4>
+        {{room.owner}}
+        <h4 style="margin: 10px 0 0 0; padding: 0">Description</h4>
+          <em style="color: #999">{% if room.description != '' %} {{room.description |DecodeUtf8}} {% else %} Aucune description{% endif %}</em>
+        <p style="margin-top: 20px" class="clearfix">
+
+        <div id="room-opened-notice" style="padding: 10px; border: #5b5 2px solid; ">Ton {{config.name}} a été envoyer vers l'appart.</div>
+      </p>
+      </div>      
+  </div>
+      </div>
+
+      <div id="footer">
+      <p><a href="{{config.url}}/support" target="_self">Aide - Contact</a> / <a href="{{config.url}}/disclaimer" target="_self">Conditions d'Utilisation</a> / <a href="{{config.url}}/community" target="_self">Communauté</a> / <a href="http://lightpics.net/" title="hébergeur d'images" target="_blank">LightPics</a> / <a href="/" target="_self">{{ config.name }}</a></p>
+      <p class="copyright">
+      © 2011-2016 {{ config.name }} Hôtel.<br/>
+      {{ config.name }} est un projet indépendant, à but non lucratif.<br/>
+      </div>
+  </div>
+  </body>
+</html>

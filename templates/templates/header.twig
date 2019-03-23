@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+<meta charset="utf-8">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="icon" type="image/x-icon" href="{{config.asset}}/favicon.ico">
+<title>{{ config.name }}: {%if title%}{{title}}{%endif%}</title>
+
+<link rel="shortcut icon" href="{{config.asset}}/favicon.ico" type="image/vnd.microsoft.icon"/>
+<link rel="stylesheet" href="{{config.asset}}/css/global.css?cache=2109181">
+
+    {% block headload %}{% endblock %}
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="{{config.asset}}/css/logo.min.css">
+	<meta charset="utf-8" />
+	<script>
+		var look = "{{ config.avatar }}{{ auth.user.look }}";
+	</script>
+	<script src="{{config.asset}}/js/logo.min.js?cache=17052018"></script>
+
+    <meta name="Geography" content="France"/>
+    <meta name="country" content="France"/>
+    <meta name="Language" content="French"/>
+    <meta name="Copyright" content="{{ config.name }}"/>
+    <link rel="canonical" href="{{config.url}}"/>
+    <meta name="identifier-url" content="{{config.url}}/"/>
+    <meta name="category" content="Rétro Habbo">
+    <meta name="reply-to" content="contact@wibbo.me">
+    <meta property="og:site_name" content="{{ config.name }} Hôtel"/>
+    <meta property="og:title" content="{{ config.name }}: Crée ton avatar, décore ton appart, chatte et fais-toi plein d'amis."/>
+    <meta property="og:url" content="{{config.url}}/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="{{ config.name }} - fais-toi plein d'amis et deviens célèbre en séjournant GRATUITEMENT dans l'un des plus grand rétro Habbo de France!"/>
+    <meta property="og:image" content="//wibbo.me/imgs/app_wibbo_hotel_image.png"/>
+    <meta property="og:locale" content="fr_FR"/>
+    <meta name="description" content="{{ config.name }} - fais-toi plein d'amis et deviens célèbre en séjournant GRATUITEMENT dans l'un des plus grand rétro Habbo de France!"/>
+    <meta name="keywords" content="{{ config.name }}, habbo, Habbo, virtuel, monde, réseau social, gratuit, communautée, avatar, chat, connectée, adolescence, jeu de rôle, rejoindre, social, groupes, forums, sécuritée, jouer, jeux, amis, rares, ados, jeunes, collector, collectionner, créer, connecter, meuble, mobilier, animaux, déco, design, appart, décorer, partager, badges, musique, chat vip, fun, sortir, mmo, mmorpg, jeu massivement multijoueur, habbo hotel, habbo gratuit, habbo credit"/>
+    <meta name="build" content="WibboCMS 0.1"/>
+    <!--<meta name= "viewport" content= "width=device-width">-->
+    </head>
+
+    <body>
+    <div id ="header">
+        <div class="container relative">
+        <div id="logo">
+		<div id="w" class="sprite sprite-w"></div>
+		<div id="i" class="sprite sprite-i"></div>
+		<div id="b1" class="sprite sprite-b1"></div>
+		<div id="b2" class="sprite sprite-b2"></div>
+		<div id="o" class="sprite sprite-o">
+			<div id="personnage"></div>
+		</div>
+	</div>
+
+            <div id="right_header">
+                <div id="top">
+                    <ul id="subnavi-search-links">
+                        <li>
+                            <a href="{{config.url}}/logout"><span class="bold">Quitter</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div style="clear: both;"></div>
+                <a class="btnhotel" href="{{config.url}}/hotel" target="_blank">Accéder à l'hôtel</a><!--onclick="OpenClient();"-->
+                {%if auth.user.rank > 5%}<a href="{{config.url}}/administration" class="btnadmin hideforsmall">Administration</a>{%endif%}
+            </div>
+
+        </div>
+    </div>
+
+    <div id="menu">
+        <div class="container">
+            <div id="menu_container">
+                <ul>
+                    <li>
+                        <a {% if page == 'me' %}class="act"{%endif%} href="{{config.url}}/me"><div class="icon" style="
+                    margin-right: 0;
+                    width: 54px;
+                    height: 56px;
+                    background-image: url({{config.avatar}}{{ auth.user.look }}&headonly=true);
+                    "></div>Moi</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="bottom_menu">
+        <div class="container">
+            <div id="bottom_menu_container">
+                <ul>{% if page == 'me' %}
+                    <li>
+                        <a class="act" href="{{config.url}}/me">{{ auth.user.username }}</a>
+                    </li>
+                    {%endif%}
+                </ul>
+            </div>
+        </div>
+    </div>
+	
+    <div class="container">
+
+    {% block content %}{% endblock %}
+
+    </div>
+    </div>
+
+    <div class="container">
+    <div id="footer">
+
+      <p><a href="{{config.url}}/disclaimer" target="_self">Conditions d'Utilisation</a> / <a href="{{config.url}}/" target="_self">Wibbo</a></p>
+      <p class="copyright">
+      © 2011-2042 Wibbo Hôtel.<br/>
+      Wibbo est un projet indépendant, à but non lucratif.<br/>
+      </p>
+      </div>
+    </div>
+
+    </body>
+</html>

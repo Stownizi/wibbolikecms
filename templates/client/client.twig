@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+
+<head>
+	<title>Wibbo: Hôtel</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<script>
+		var roomId = {{ roomId }};
+	</script>
+
+	<link rel="stylesheet" href="{{config.url}}/client/main.css?cache=21118">
+	<script src="{{config.url}}/client/build.js?cache=261118"></script>
+
+	<link rel="shortcut icon" href="{{config.url}}/favicon.ico" type="image/vnd.microsoft.icon" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store" />
+	<meta name="google" content="notranslate" />
+</head>
+
+<body>
+	<div id="flash-container">
+		<div id="content">
+			<h1 class="title">TU DOIS UTILISER FLASH POUR JOUER À WIBBO !</h1>
+			<p>Si tu utilises un ordinateur, tu dois <a href="http://www.adobe.com/go/getflashplayer" target="_blank">autoriser, installer ou actualiser Flash </a> pour jouer à Wibbo.
+			Clique <a href="http://www.adobe.com/go/getflashplayer" target="_blank">ICI</a> pour utiliser Flash ! NB: si Flash est bloqué,
+			tu auras besoin d’aller dans les paramètres de ton navigateur pour le débloquer et pouvoir jouer à Wibbo.</p>
+			<div class="center_text">
+				<a href="//www.adobe.com/go/getflashplayer" class="getadobe"></a>
+			</div>
+		</div>
+	</div>		
+	<div id="client-ui">
+		<fullscreen></fullscreen>
+
+		<infobulle></infobulle>
+
+		<rpstats></rpstats>
+		<rpbox-buyitems></rpbox-buyitems>
+		 <rpbox-inventory>
+                <rpbox-inventory-troc></rpbox-inventory-troc>
+            </rpbox-inventory>
+        <rpbox-inventory-choice></rpbox-inventory-choice>
+
+		<room-options></room-options>
+		<settings-box></settings-box>
+		<notifalert></notifalert>
+
+		<youtube-box>
+			<youtube-player></youtube-player>
+			<youtube-edit></youtube-edit>
+		</youtube-box>
+
+		<wibbotool>
+			<wibbotool-hotelalert></wibbotool-hotelalert>
+			<wibbotool-chatlogpub></wibbotool-chatlogpub>
+		</wibbotool>
+
+	</div>
+
+</body>
+
+</html>

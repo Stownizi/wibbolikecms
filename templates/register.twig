@@ -1,0 +1,57 @@
+{% extends 'templates/start.twig' %}
+
+{% block content %}
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+{% if flash.getMessage('error') %}
+      <div id="loginerrorfield">{{ flash.getMessage('error') | first }}</div>
+    {% endif %}
+
+<div class="center">
+  <h1 id="logo"></h1>
+    
+    <div class="clear"></div>
+  <div class="container">
+  <div id="connexion">
+    <div id="form">
+    <h2>Je veux m'inscrire</h2>
+
+    <div id="notice"><span><span class="bold">Choisissez</span> un Pseudo et un mot de passe pour vous connecter</span></div>
+      <form method="post" action="{{config.url}}{{ path_for('auth.register') }}" id="left">
+        <label for="username">Ton pseudonyme</label>
+        <input type="text" name="username" placeholder="Ton pseudonyme" />
+        <label for="password">Mot de passe</label>
+        <input type="password" name="password" placeholder="Mot de passe" />
+        <label for="repassword">Rép&egrave;te ton mot de passe</label>
+        <input type="password" name="repassword" placeholder="Rép&egrave;te ton mot de passe" />
+        <label class="tire">
+        <input type="checkbox" name="condition" id="terms" value="true" class="checkbox-field"/>
+        J'accepte les <a href="/disclaimer" target="_blank">conditions d'utilisation</a>
+        </label>
+        <div class="clear" style="padding:4px 0 0 0"></div>
+        <input type="submit" value="S'inscrire">
+
+        {{ csrf.field| raw }}
+      </form>
+       <div id="right">
+    <div style="height:251px;">
+        <div id="help">
+            Ton pseudo peut contenir des lettres (majuscules et minuscule), des nombres et des tirets (-).
+        </div>
+        <div id="help">
+            Ton mot de passe doit comprendre au moins <b>6 caractères</b> et inclure des <b>lettres et des chiffres</b>.
+        </div>
+        <div id="help">
+            Valide le captcha pour confirmer ton inscription et ta présence humaine.
+        </div>
+        </div>
+        <div class="clear"></div>
+        <a href="{{ path_for('auth.signin') }}" class="login">Retour</a>
+    </div>
+    </div>
+  </div>
+ 
+</div>
+</div>
+
+{% endblock %}

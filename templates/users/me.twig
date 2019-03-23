@@ -1,0 +1,57 @@
+{% extends 'templates/header.twig' %}
+
+{% block headload %}
+<link rel="stylesheet" href="{{config.asset}}/css/me.css">
+{% endblock %}
+
+{% block content %}
+<div class="col-12 hideforsmall">
+<div id="me">
+<div id="habbo-plate">
+<a onmouseover="document.img_1.src='{{config.avatar}}{{ auth.user.look }}&amp;action=wav';" onmouseout="document.img_1.src='{{config.avatar}}{{ auth.user.look }}';">
+<img alt="{{ auth.user.username }}" class="img" name="img_1" src="{{config.avatar}}{{ auth.user.look }}">
+</a>
+</div>
+<div id="name-box" class="info-box">
+<div class="content" style="float:right;">
+<div id="link-bar">
+<div class="vipclub">
+{% if auth.user.rank == 2 %}
+<a href="{{base_url}}/boutique/premium">0</a> jours VIP restants
+{% else %}
+<a href="{{base_url}}/boutique/premium">Adh&eacute;rer au Premium &raquo;</a>
+{% endif %}
+</div>
+</div>
+</div>
+<div class="label">Nom:</div>
+<div class="content">{{ auth.user.username }}</div>
+</div>
+<div id="motto-box" class="info-box">
+<div class="label">Dernière connexion:</div>
+<div class="content">{{ auth.user.last_offline | date('d/m/Y à H:i:s') }}</div>
+</div>
+<div id="last-logged-in-box" class="info-box">
+<div class="label">Porte monnaie:</div>
+<div class="content">
+<div id="link-bar">
+<div class="credits" style="display: inline;"><a href="#">{{ auth.user.credits }}</a> Crédits</div>
+<div class="jetons" style="display: inline;"><a href="{{config.url}}/boutique">{{ auth.user.jetons }}</a> Jetons</div>
+<div class="points" style="display: inline;"><a href="{{config.url}}/boutique/points">{{ auth.user.vip_points }}</a> WP</div>
+</div>
+</div>
+</div>
+<div class="enter-hotel-btn">
+<div class="open enter-btn">
+<a class="btnclient" href="{{config.url}}/hootel" target="_blank">Accéder à l'hôtel</a>
+</div>
+<br />
+</div>
+
+</div>
+</div>
+
+
+</div>
+
+{% endblock %}

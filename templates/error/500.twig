@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ config.name }}: 404</title>
+    <link rel="shortcut icon" href="{{config.url}}/favicon.ico" type="image/vnd.microsoft.icon"/>
+    <link rel="stylesheet" href="{{config.url}}/css/global.css?release=1">
+    <link rel="stylesheet" href="{{config.url}}/css/error.css?release=1">
+  </head>
+
+  <body>
+  <div class="container" style="margin-top: 80px;">
+  <div class="col-12">
+    <div id="errorPage">
+      <div id="frank"></div>
+      <h2>Erreur systeme</h2>
+      <p>
+        Une erreur est survenue, merci d'essayer ultérieument.
+      </p>
+      <a href="/">revenir au site</a>
+    </div>
+    <div class="clear"></div>
+          <div id="footer" style="text-align:center">
+      <p><a href="/support" target="_self">Aide - Contact</a> / <a href="/regles" target="_self">Conditions d'Utilisation</a> / <a href="/community" target="_self">Communauté</a> / <a href="/" target="_self">{{ config.name }}</a></p>
+      <p class="copyright">
+      © 2011-2017 {{ config.name }} Hôtel.<br/>
+      {{ config.name }} est un projet indépendant, à but non lucratif.<br/>
+      </div>
+  </div>
+  </div>
+  </body>
+</html>

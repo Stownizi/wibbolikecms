@@ -1,0 +1,269 @@
+body {
+    background-image: url(//swf.wibbo.me/dcr/c_images/reception/doublecredit_background_gradient.png);
+    background-attachment: fixed;
+    padding:0;
+    margin:0;
+    font-family: ubuntu condensed,trebuchet ms,lucida grande,lucida sans unicode,lucida sans,Tahoma,sans-serif;
+    font-size:1.0em;
+    margin: 0;
+    padding: 0;
+}
+
+.error {
+    background-color: #b00000;
+    padding: 12px 10px;
+    display: block;
+    text-align: center;
+    border: solid 2px rgba(0,0,0,.2);
+    border-left: 0;
+    border-right: 0;
+}
+
+.error p {
+    color: #fff;
+    font-size: 16px;
+}
+
+header {
+    position: relative;
+    border-bottom: 2px solid rgba(0, 0, 0, 1);
+    background-image: url('./header.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+.carousel_container {
+    margin-top: 20px;
+}
+
+.fond_filtre {
+    padding: 50px 0;
+}
+
+.connexion_container {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 0px;
+}
+
+.form-group {
+    margin-left: 10px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    color: #444;
+    font-size: 0.9em;
+    padding: 0 13px;
+}
+
+label {
+    display: block;
+    float: left;
+    color: #fff;
+    font-weight: 600;
+    white-space: nowrap;
+    text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+a {
+    color: #FFFFFF;
+}
+
+.forgot {
+    text-decoration: underline
+}
+
+.btn_connexion {
+    display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0px 20px;
+    height: 40px;
+    margin-top: 26px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    background: #0078B4;
+    border: 2px solid #0091DA;
+    font-size: 1.1em;
+    -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    cursor: pointer
+}
+
+.btn_connexion:hover {
+    background: #0091DA
+}
+
+.logo {
+    background-image: url(//wibbo.me/imgs/logo.png);
+    width: 135px;
+    height: 33px;
+    cursor: pointer;
+    margin: 30px auto;
+}
+
+.logo:hover {
+    background-image: url(//wibbo.me/imgs/logohover.png);
+}
+
+.bienvenue {
+    margin-top: 15px;
+}
+
+h1 {
+    color: white;
+    text-transform: uppercase;
+    font-style: italic;
+    text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.4);
+    font-size: 2.5em;
+    line-height: 30px;
+    margin: 0;
+}
+
+p {
+    color: white;
+    font-size: 1.0em;
+}
+
+.btn_register {
+    display: inline-block;
+    padding: 30px 30px;
+    background: #219050;
+    border: solid 2px #8EDA55;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 1px 0px 0px, rgba(0, 0, 0, 0.3) -1px 4px 0px;
+            box-shadow: rgba(0, 0, 0, 0.3) 1px 0px 0px, rgba(0, 0, 0, 0.3) -1px 4px 0px;
+    text-align: center;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    color: white;
+    -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn_register:hover {
+    background-color: #2BBA67
+}
+
+.bull_decouverte {
+    background-image: url(./carousel_1.png);
+}
+
+.bull_decouverte .info {
+    background-color: rgba(129, 116, 34, 0.6);
+}
+
+.bull_decouverte h2 {
+    color: #D2BD37;
+}
+
+.bull_style {
+    background-image: url(./carousel_2.png);
+}
+
+.bull_style .info {
+    background-color: rgba(130, 42, 72, 0.8);
+}
+
+.bull_style h2 {
+    color: #ff367a;
+}
+
+.bull_animation {
+    background-image: url(./carousel_3.png);
+}
+
+.bull_animation .info {
+    background-color: rgba(16, 86, 127, 0.8);
+}
+
+.bull_animation h2 {
+    color: #1B8ED2;
+}
+
+aside {
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    width:100%;
+    height:272px;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+aside h2 {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    padding: 5px;
+    margin: 0px;
+
+    font-size: 1.6em;
+    text-transform: uppercase;
+    font-weight:500;
+}
+
+aside .bullimgui {
+    width: 100%;
+}
+
+aside .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+aside .info p {
+    margin: 10px;
+    text-align: left;
+    font-size: 0.8em;
+}
+
+footer {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 0.8em;
+}
+
+footer a {
+    color: #FFFFFF;
+}
+
+.background_left{
+    background-image: url(//swf.wibbo.me/dcr/c_images/reception/doublecredit_2014_background_left.png);
+    width: 296px;
+    height: 298px;
+    z-index: -1000;
+    background-repeat: no-repeat;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+}
+
+.background_right{
+    background-image: url(//swf.wibbo.me/dcr/c_images/reception/background_right_easter2016.png);
+    width: 484px;
+    height: 463px;
+    z-index: -1000;
+    background-repeat: no-repeat;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
